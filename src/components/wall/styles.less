@@ -1,0 +1,65 @@
+:local(.wrapper) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+:local(.wall) {
+  // border: 2px solid #777;
+  overflow: hidden;
+  height: 100%;
+}
+
+:local(.walledit) {
+  overflow: auto;
+};
+:local(.walladd) {
+  overflow: auto;
+  width: 100%;
+  &:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    content: "+";
+    font-size: 200px;
+    font-weight: bold;
+    height: 100%;
+    -webkit-filter: opacity(0.5);
+    transition: 0.5s all ease;
+  }
+  &:hover:before {
+    -webkit-filter: none;
+  }
+};
+
+:local(.meta) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+  position: relative;
+
+  opacity: 0.5;
+  cursor: pointer;
+
+  transition: 0.5s all ease;
+  
+  &:hover {
+    opacity: 1;
+  }
+}
+
+:local(.name) {
+  font-size: 0.75em;
+  font-weight: bold;
+}
+
+:local(.editicon) {
+  position: absolute;
+  right: 10px;
+}
